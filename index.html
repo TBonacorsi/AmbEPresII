@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiência de Som com Pontos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #play-area {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #menu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <button id="start-sound">Iniciar Sons</button>
+        <div id="point-info"></div>
+        <select id="point-selector">
+            <option value="">Selecione um ponto</option>
+        </select>
+    </div>
+    <div id="play-area"></div>
+
+    <audio id="top-left-audio" src="Caixa1.mp3" loop></audio>
+    <audio id="top-right-audio" src="Caixa2.mp3" loop></audio>
+    <audio id="bottom-left-audio" src="Caixa3.mp3" loop></audio>
+    <audio id="bottom-right-audio" src="Caixa4.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
